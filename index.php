@@ -19,59 +19,98 @@
        
 <form class="center" action="index.php" method="get">
     <input type="text" name="input">
-  <select name="currency1">
+  <select name="dropdown1">
     <option value="usd">US Dollar</option>
     <option value="euro">Euro</option>
     <option value="jpy">Japanese Yen</option>
     <option value="germ">German Mark</option>
   </select>
     <input type="submit" name="sbmt" value="Convert=>"/>
-    <input type="text" name="amount_output"/>
-   <select name="currency2">
-    <option value="usdollar">US Dollar</option>
+    <input type="text" name ="output">
+   <select name="dropdown2">
+    <option value="usd">US Dollar</option>
     <option value="euro">Euro</option>
-    <option value="japaneseyen">Japanese Yen</option>
-    <option value="germanmark">German Mark</option>
+    <option value="jpy">Japanese Yen</option>
+    <option value="germ">German Mark</option>
    </select>
      
 </form>
-
-</body>
-</html>
-<?php
+        <?php
      if(isset($_GET['sbmt']))
      {
          
-        $input = $_GET['input'];
-        $currency1 =$_GET['currency1'];
-        $currency2 = $_GET['currency2'];
-        $amount_output = $_GET['amount_output'];
+        $cc_input = $_GET['input'];
+        $cc_dropdown1 =$_GET['dropdown1'];
+        $cc_dropdown2 = $_GET['dropdown2'];
+        $output = $_GET['output'];
         
-        if($currency1 == 'usdollars')
+        if($cc_dropdown1 == 'usd' AND $cc_dropdown2 == 'usd')
         {
-            if($currency2 == 'euro'){
-                
-            }
-            $amount_output = $cc_input*0.96;
-            echo $amount_output . " Dollar" ;
-        }
+            $output = $cc_input*1;
+            echo $output;   
         
-        else if($currency1 == 'usdollars' AND $currency2 == 'japaneseyen')
-        {
+        }else if($cc_dropdown1 == 'usd' AND $cc_dropdown2 == 'euro'){
+            $output = $cc_input*0.96;
+            echo $output; 
+            
+        }else if($cc_dropdown1 == 'usd' AND $cc_dropdown2 == 'jpy'){
             $output = $cc_input*117.92;
-            echo $amount_output . " Dollar";
-        }
-        else if($currency1 == 'usdollars' AND $currency2 == 'germanmark')
-        {
-            $amount_output = $cc_input*1.876;
-            echo $amount_output . " Dollar" ;
-        }
-        else if($currency1 == 'euro' AND $currency2 == 'usdollars')
-        {
-            $amount_output = $cc_input*0;
-            echo $amount_output . " Dollar" ;
-        }
+            echo $output;  
+            
+        }else if($cc_dropdown1 == 'usd' AND $cc_dropdown2 == 'germ'){
+            $output = $cc_input*1.876;
+            echo $output; 
+            
+        }else if($cc_dropdown1 == 'euro' AND $cc_dropdown2 == 'usd'){
+            $output = $cc_input*0;
+            echo $output;
+            
+            
+        }else if($cc_dropdown1 = 'euro' AND $cc_dropdown2 == 'euro'){
+            $output = $cc_input*1;
+            echo $output;
+            
+        }else if($cc_dropdown1 == 'euro' AND $cc_dropdown2 == 'jpy'){
+            $output = $cc_input*122.83;
+            echo $output;
         
-    }
-    
+        }else if($cc_dropdown1 = 'euro' AND $cc_dropdown2 == 'germ'){
+            $output = $cc_input*1.954;
+            echo $output;
+            
+        }else if($cc_dropdown1 = 'jpy' AND $cc_dropdown2 == 'usd'){
+            $output = $cc_input*0;
+            echo $output;
+            
+        }else if($cc_dropdown1 = 'jpy' AND $cc_dropdown2 == 'euro'){
+            $output = $cc_input*0;
+            echo $output;
+            
+        }else if($cc_dropdown1 = 'jpy' AND $cc_dropdown2 == 'jpy'){
+            $output = $cc_input*1;
+            echo $output;
+            
+        }else if($cc_dropdown1 = 'jpy' AND $cc_dropdown2 == 'germ'){
+            $output = $cc_input*62.857;
+            echo $output;
+            
+        }else if($cc_dropdown1 = 'germ' AND $cc_dropdown2 == 'usd'){
+            $output = $cc_input*0;
+            echo $output;
+            
+        }else if($cc_dropdown1 = 'germ' AND $cc_dropdown2 == 'euro'){
+            $output = $cc_input*0;
+            echo $output;
+            
+        }else if($cc_dropdown1 = 'germ' AND $cc_dropdown2 == 'jpy'){
+            $output = $cc_input*0;
+            echo $output;
+            
+            }else if($cc_dropdown1 = 'germ' AND $cc_dropdown2 == 'germ'){
+            $output = $cc_input*1;
+            echo $output;
+            }
+     }
 ?>
+</body>
+</html>
