@@ -25,8 +25,8 @@
     <option value="jpy">Japanese Yen</option>
     <option value="germ">German Mark</option>
   </select>
+     <input type="text" name ="output" value ="<?php if (isset($output))echo $output ?>">
     <input type="submit" name="sbmt" value="Convert=>"/>
-    <input type="text" name ="output">
    <select name="dropdown2">
     <option value="usd">US Dollar</option>
     <option value="euro">Euro</option>
@@ -47,7 +47,7 @@
         if($cc_dropdown1 == 'usd' AND $cc_dropdown2 == 'usd')
         {
             $output = $cc_input*1;
-            echo $output;   
+              
         
         }else if($cc_dropdown1 == 'usd' AND $cc_dropdown2 == 'euro'){
             $output = $cc_input*0.96;
