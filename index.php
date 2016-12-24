@@ -20,37 +20,37 @@
         }else if($cc_dropdown1 == 'usd' AND $cc_dropdown2 == 'germ'){
             $output = $cc_input*1.876;
            
-        }else if($cc_dropdown1 = 'euro' AND $cc_dropdown2 == 'usd'){
+        }else if($cc_dropdown1 == 'euro' AND $cc_dropdown2 == 'usd'){
             $output = $cc_input*1.04;
             
-        }else if($cc_dropdown1 = 'euro' AND $cc_dropdown2 == 'euro'){
+        }else if($cc_dropdown1 == 'euro' AND $cc_dropdown2 == 'euro'){
             $output = $cc_input*1;
             
         }else if($cc_dropdown1 == 'euro' AND $cc_dropdown2 == 'jpy'){
             $output = $cc_input*122.83;
             
-        }else if($cc_dropdown1 = 'euro' AND $cc_dropdown2 == 'germ'){
+        }else if($cc_dropdown1 == 'euro' AND $cc_dropdown2 == 'germ'){
             $output = $cc_input*1.954;
          
-        }else if($cc_dropdown1 = 'jpy' AND $cc_dropdown2 == 'usd'){
+        }else if($cc_dropdown1 == 'jpy' AND $cc_dropdown2 == 'usd'){
             $output = $cc_input*0.0085;
             
-        }else if($cc_dropdown1 = 'jpy' AND $cc_dropdown2 == 'euro'){
+        }else if($cc_dropdown1 == 'jpy' AND $cc_dropdown2 == 'euro'){
             $output = $cc_input*0.0082;
             
-        }else if($cc_dropdown1 = 'jpy' AND $cc_dropdown2 == 'jpy'){
+        }else if($cc_dropdown1 == 'jpy' AND $cc_dropdown2 == 'jpy'){
             $output = $cc_input*1;
            
-        }else if($cc_dropdown1 = 'jpy' AND $cc_dropdown2 == 'germ'){
+        }else if($cc_dropdown1 == 'jpy' AND $cc_dropdown2 == 'germ'){
             $output = $cc_input*0.015;
             
-        }else if($cc_dropdown1 = 'germ' AND $cc_dropdown2 == 'usd'){
+        }else if($cc_dropdown1 == 'germ' AND $cc_dropdown2 == 'usd'){
             $output = $cc_input*1.955;
             
-        }else if($cc_dropdown1 = 'germ' AND $cc_dropdown2 == 'jpy'){
+        }else if($cc_dropdown1 == 'germ' AND $cc_dropdown2 == 'jpy'){
             $output = $cc_input*62.77;
             
-        }else if($cc_dropdown1 = 'germ' AND $cc_dropdown2 == 'euro'){
+        }else if($cc_dropdown1 == 'germ' AND $cc_dropdown2 == 'euro'){
             $output = $cc_input*0.51;
             }
      }
